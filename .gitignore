@@ -1,0 +1,20 @@
+# Secrets and environment files
+.env
+.env.*
+*.key
+*.pem
+
+# Private working material
+private/
+secrets/
+
+# Windows-generated files
+Thumbs.db
+Desktop.ini
+
+# macOS-generated files
+.DS_Store
+
+# Temporary and backup files
+*.tmp
+*.bak
