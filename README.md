@@ -24,7 +24,27 @@ The emphasis is on understanding why an action is performed, validating the resu
 
 | Skill | Status | Hands-On Work |
 |---|---|---|
-| [Security Incident Triage](skills/triaging-security-incident/README.md) | Learning | Windows authentication analysis |
+| [Security Incident Triage](skills/triaging-security-incident/README.md) | Learning | Windows authentication analysis, event correlation, and timeline analysis |
+
+## Completed Hands-On Skills
+
+| Skill / Capability | Status | Evidence |
+|---|---|---|
+| Security event, alert, and incident differentiation | Completed | Triage fundamentals |
+| Investigation-question development | Completed | Security Incident Triage exercises |
+| Evidence identification | Completed | Security Incident Triage exercises |
+| Windows successful logon analysis | Completed | Event ID `4624` analysis |
+| Windows failed logon analysis | Completed | Event ID `4625` analysis |
+| Windows authentication failure analysis | Completed | [Authentication Failure Analysis](skills/triaging-security-incident/labs/authentication-failure-analysis/README.md) |
+| Raw Windows event XML validation | Completed | Event Viewer General/XML comparison |
+| Password vs Windows Hello PIN failure analysis | Completed | Authentication Failure Analysis lab |
+| Failed-to-successful authentication correlation | Completed | [Authentication Timeline Correlation](skills/triaging-security-incident/labs/authentication-timeline-correlation/README.md) |
+| Authentication timeline construction | Completed | Authentication Timeline Correlation lab |
+| Windows Logon Type analysis | Completed | Logon Types `2`, `5`, `7`, and `11` examined |
+| Linked Logon ID analysis | Completed | Type `7` and Type `11` paired-session analysis |
+| Elevated vs non-elevated session comparison | Completed | Event ID `4624` analysis |
+| Evidence sanitization for GitHub | Completed | Sanitized screenshots and documentation |
+| Git/GitHub portfolio workflow | Practicing | Repository initialization, staging, commits, remotes, push, and troubleshooting |
 
 Additional skills will be added as I actually begin working on them.
 
@@ -49,6 +69,23 @@ Work performed includes:
 
 [View the authentication failure analysis lab](skills/triaging-security-incident/labs/authentication-failure-analysis/README.md)
 
+#### Windows Authentication Timeline Correlation
+
+Correlated a controlled failed Windows password authentication with subsequent successful workstation-unlock activity.
+
+Work performed includes:
+
+- correlating Event ID `4625` with subsequent Event ID `4624` activity
+- building a failed-to-successful authentication timeline
+- analyzing Logon Type `7` workstation unlocks
+- examining supporting Logon Type `11` CachedInteractive events
+- analyzing Linked Logon IDs
+- comparing elevated and non-elevated authentication contexts
+- resolving conflicting manual notes using primary log evidence
+- preserving sanitized General and XML evidence
+
+[View the authentication timeline correlation lab](skills/triaging-security-incident/labs/authentication-timeline-correlation/README.md)
+
 ---
 
 ## Tools Used
@@ -60,6 +97,12 @@ Tools listed here are included only after they have been used during hands-on wo
 - Windows Settings
 - Command Prompt
 - Git
+
+---
+
+## Current Focus
+
+Security incident triage decision-making, including severity assessment, incident disposition, and escalation decisions based on collected evidence.
 
 ---
 

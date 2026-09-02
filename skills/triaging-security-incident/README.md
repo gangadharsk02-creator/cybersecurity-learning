@@ -63,6 +63,13 @@ This helps avoid random log searching and premature conclusions.
 - Used raw XML to verify structured Event Viewer data.
 - Compared controlled password and Windows Hello PIN authentication failures.
 
+- Correlated a controlled Event ID `4625` failure with subsequent Event ID `4624` success activity.
+- Built a timestamp-based authentication timeline.
+- Analyzed Logon Type `7` workstation-unlock events.
+- Identified supporting Logon Type `11` CachedInteractive events.
+- Used Linked Logon IDs to identify paired elevated and non-elevated authentication contexts.
+- Practiced resolving conflicting manual notes using primary log evidence.
+
 ---
 
 ## Hands-On Labs
@@ -82,6 +89,25 @@ The lab includes:
 - documented observations and limitations
 
 [View the authentication failure analysis lab](labs/authentication-failure-analysis/README.md)
+
+### 2. Windows Authentication Timeline Correlation
+
+I correlated a controlled failed password authentication with subsequent successful Windows authentication activity.
+
+The lab includes:
+
+- Event ID `4625` failed-authentication analysis
+- Event ID `4624` successful-authentication analysis
+- failed-to-successful event correlation
+- Logon Type `7` workstation-unlock analysis
+- supporting Logon Type `11` CachedInteractive activity
+- Linked Logon ID analysis
+- elevated and non-elevated session comparison
+- authentication timeline construction
+- handling conflicting analyst notes
+- sanitized General and XML evidence
+
+[View the authentication timeline correlation lab](labs/authentication-timeline-correlation/README.md)
 
 ---
 
@@ -122,8 +148,8 @@ Sensitive machine-identifying information was removed from public screenshots.
 | Basic authentication-event interpretation | Completed |
 | Raw XML validation | Completed |
 | Controlled failure correlation | Completed |
-| Failed → successful logon correlation | Not Started |
-| Authentication timeline analysis | Not Started |
+| Failed → successful logon correlation | Completed |
+| Authentication timeline analysis | Completed |
 | Severity assessment | Not Started |
 | Incident disposition | Not Started |
 | Escalation decision | Not Started |
@@ -173,6 +199,6 @@ Before I consider security incident triage completed, I should be able to indepe
 
 ## Next Focus
 
-The next stage is to move beyond individual authentication events and begin correlating related events into a timeline.
+The next stage is to move from authentication-event correlation into triage decision-making.
 
-This will include examining relationships between failed and successful authentication activity before making a triage decision.
+This will include assessing the severity and context of observed activity, determining whether the evidence represents benign, suspicious, or malicious behavior, documenting an incident disposition, and deciding whether escalation is required.
