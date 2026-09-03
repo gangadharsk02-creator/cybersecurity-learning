@@ -237,6 +237,46 @@ There is no evidence from this test alone that indicates malicious activity, acc
 
 ---
 
+## Triage Decision
+
+### Severity
+
+**Informational**
+
+The observed sequence was deliberately generated during a controlled authentication test.
+
+A single failed authentication at `07:47:58` was followed 15 seconds later by successful workstation-unlock activity. No demonstrated security impact or malicious follow-on activity was identified in the evidence examined.
+
+### Disposition
+
+**Benign / Test Activity**
+
+The authentication sequence directly matches the known controlled actions performed during the lab.
+
+Supporting evidence includes:
+
+- the failed authentication was deliberately generated
+- the recorded source address was localhost (`127.0.0.1`)
+- successful workstation-unlock activity followed 15 seconds later
+- no malicious follow-on activity was identified
+- no contradictory evidence was identified
+
+**Confidence: High**
+
+### Escalation Decision
+
+**Do Not Escalate**
+
+The activity is confidently explained as authorized controlled testing. No unresolved security questions or evidence requiring higher-tier investigation were identified.
+
+### Closure Recommendation
+
+**Close — Authorized Test Activity**
+
+No additional investigation is required for this controlled lab sequence.
+
+---
+
 ## Evidence Handling
 
 Before being added to the public portfolio, screenshots were sanitized to remove identifying information such as:

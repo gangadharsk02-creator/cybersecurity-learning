@@ -70,6 +70,17 @@ This helps avoid random log searching and premature conclusions.
 - Used Linked Logon IDs to identify paired elevated and non-elevated authentication contexts.
 - Practiced resolving conflicting manual notes using primary log evidence.
 
+### Triage Decision-Making
+
+- Assessed activity severity using context, scope, impact, and available evidence.
+- Distinguished an observed security event from demonstrated malicious activity.
+- Assigned an `Informational` severity to controlled benign activity.
+- Classified activity as `Benign / Test Activity`.
+- Expressed investigation confidence as `High`.
+- Determined that escalation was not required.
+- Recommended closure as `Close — Authorized Test Activity`.
+- Practiced distinguishing benign activity from a false-positive classification.
+
 ---
 
 ## Hands-On Labs
@@ -150,9 +161,9 @@ Sensitive machine-identifying information was removed from public screenshots.
 | Controlled failure correlation | Completed |
 | Failed → successful logon correlation | Completed |
 | Authentication timeline analysis | Completed |
-| Severity assessment | Not Started |
-| Incident disposition | Not Started |
-| Escalation decision | Not Started |
+| Severity assessment | Completed |
+| Incident disposition | Completed |
+| Escalation decision | Completed |
 | Process triage | Not Started |
 | Network triage | Not Started |
 | IOC triage | Not Started |
@@ -199,6 +210,6 @@ Before I consider security incident triage completed, I should be able to indepe
 
 ## Next Focus
 
-The next stage is to move from authentication-event correlation into triage decision-making.
+The next stage is process triage.
 
-This will include assessing the severity and context of observed activity, determining whether the evidence represents benign, suspicious, or malicious behavior, documenting an incident disposition, and deciding whether escalation is required.
+This will involve examining Windows process activity, parent-child process relationships, command lines, execution context, and other evidence used to determine whether process behavior is expected or suspicious.

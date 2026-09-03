@@ -44,6 +44,9 @@ The emphasis is on understanding why an action is performed, validating the resu
 | Linked Logon ID analysis | Completed | Type `7` and Type `11` paired-session analysis |
 | Elevated vs non-elevated session comparison | Completed | Event ID `4624` analysis |
 | Evidence sanitization for GitHub | Completed | Sanitized screenshots and documentation |
+| Security severity assessment | Completed | Context, scope, impact, and evidence-based severity classification |
+| Incident disposition | Completed | Benign / Test Activity classification with confidence assessment |
+| Escalation and closure decision | Completed | Do Not Escalate and Close — Authorized Test Activity |
 | Git/GitHub portfolio workflow | Practicing | Repository initialization, staging, commits, remotes, push, and troubleshooting |
 
 Additional skills will be added as I actually begin working on them.
@@ -102,7 +105,7 @@ Tools listed here are included only after they have been used during hands-on wo
 
 ## Current Focus
 
-Security incident triage decision-making, including severity assessment, incident disposition, and escalation decisions based on collected evidence.
+Windows process triage, including process execution context, parent-child relationships, command-line analysis, and determining whether process activity is expected or suspicious.
 
 ---
 
