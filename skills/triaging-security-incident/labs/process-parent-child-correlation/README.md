@@ -905,8 +905,8 @@ A stronger investigation combines process lineage, PIDs, timestamps, paths, comm
 
 ## Current Lab Status
 
-**Completed locally — GitHub documentation review pending**
+**Published and verified on GitHub**
 
-The controlled investigation, evidence collection, analysis, documentation, and local quality checks are complete.
+The controlled investigation, evidence collection, analysis, documentation, screenshot sanitization, commit/push workflow, and remote GitHub verification are complete.
 
-The lab will be considered published only after the repository changes are reviewed, committed, pushed to GitHub, and verified on the remote repository.
+This lab is complete as an individual hands-on lab. The broader Security Incident Triage skill remains **Learning**, and process triage remains **Learning**.

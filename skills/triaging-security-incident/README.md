@@ -93,7 +93,7 @@ Only tools and data sources actually used during the hands-on investigations are
 
 - **Windows Event Viewer** — located, filtered, and examined Windows Security events.
 - **PowerShell** — queried Windows event records and searched structured event data during process correlation.
-- **Command Prompt** — generated controlled authentication/process activity and executed test commands.
+- **Command Prompt** — generated controlled process activity and executed test commands.
 - **`auditpol.exe`** — inspected and enabled Windows process-creation auditing.
 - **`reg.exe` / Windows Registry** — inspected and enabled command-line inclusion for Event ID `4688`.
 
