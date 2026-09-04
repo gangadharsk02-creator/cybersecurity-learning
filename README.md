@@ -1,14 +1,89 @@
 # Cybersecurity Learning Portfolio
 
-This repository documents my hands-on cybersecurity learning through practical labs, evidence-based analysis, troubleshooting, and progressively more independent exercises.
+This repository documents my hands-on cybersecurity learning through practical labs, evidence-based analysis, troubleshooting, and progressively more independent investigation work.
 
-The purpose of this repository is to demonstrate what I have actually practiced and verified rather than present untested concepts as completed skills.
+The portfolio is intended to demonstrate what I have actually practiced and verified rather than present untested concepts as completed skills.
+
+---
+
+## Portfolio Navigation
+
+### Skills
+
+Browse the complete skills catalog:
+
+**[Cybersecurity Skills Catalog](skills/README.md)**
+
+Each skill has its own README containing:
+
+- current status
+- demonstrated hands-on capabilities
+- hands-on labs
+- investigation tools and data sources
+- evidence produced
+- learning progress
+- important lessons
+- completion criteria
+- next learning focus
+
+### Hands-On Evidence
+
+Detailed investigation evidence is stored inside the relevant skill and lab directories rather than duplicated on this landing page.
+
+Navigation follows:
+
+```text
+Portfolio
+    ↓
+Skills Catalog
+    ↓
+Individual Skill
+    ↓
+Hands-On Lab
+    ↓
+Investigation Evidence
+```
+
+---
+
+## Featured Skill
+
+### Security Incident Triage
+
+**Status: Learning**
+
+[View Security Incident Triage](skills/triaging-security-incident/README.md)
+
+Current hands-on work has included:
+
+- Windows authentication-event investigation
+- failed-to-successful authentication correlation
+- authentication timeline construction
+- severity, disposition, escalation, and closure decisions
+- Windows process-creation analysis
+- parent-child process correlation
+- command-line analysis
+
+The broader process-triage capability remains in progress and is not yet marked complete.
+
+---
+
+## Current Focus
+
+Continue Windows process triage with less obviously benign activity.
+
+The next work will focus on:
+
+- suspicious or unusual parent-child process relationships
+- unusual command-line patterns
+- determining what additional evidence is required when process intent is uncertain
+- avoiding conclusions based only on executable names
 
 ---
 
 ## Learning Approach
 
-My learning process follows:
+My general learning workflow is:
 
 **Learn → Do → Verify → Troubleshoot → Document → Review**
 
@@ -16,110 +91,113 @@ For investigation-focused work, I use:
 
 **Goal → Question → Action → Evidence → Analysis → Conclusion**
 
-The emphasis is on understanding why an action is performed, validating the result, and documenting evidence that supports the conclusion.
+The emphasis is on understanding why an action is performed, validating the result, separating observations from assumptions, and documenting evidence that supports the conclusion.
 
 ---
 
-## Current Skills
+## Portfolio Principles
 
-| Skill | Status | Hands-On Work |
-|---|---|---|
-| [Security Incident Triage](skills/triaging-security-incident/README.md) | Learning | Windows authentication analysis, event correlation, and timeline analysis |
+This repository follows several documentation principles:
 
-## Completed Hands-On Skills
-
-| Skill / Capability | Status | Evidence |
-|---|---|---|
-| Security event, alert, and incident differentiation | Completed | Triage fundamentals |
-| Investigation-question development | Completed | Security Incident Triage exercises |
-| Evidence identification | Completed | Security Incident Triage exercises |
-| Windows successful logon analysis | Completed | Event ID `4624` analysis |
-| Windows failed logon analysis | Completed | Event ID `4625` analysis |
-| Windows authentication failure analysis | Completed | [Authentication Failure Analysis](skills/triaging-security-incident/labs/authentication-failure-analysis/README.md) |
-| Raw Windows event XML validation | Completed | Event Viewer General/XML comparison |
-| Password vs Windows Hello PIN failure analysis | Completed | Authentication Failure Analysis lab |
-| Failed-to-successful authentication correlation | Completed | [Authentication Timeline Correlation](skills/triaging-security-incident/labs/authentication-timeline-correlation/README.md) |
-| Authentication timeline construction | Completed | Authentication Timeline Correlation lab |
-| Windows Logon Type analysis | Completed | Logon Types `2`, `5`, `7`, and `11` examined |
-| Linked Logon ID analysis | Completed | Type `7` and Type `11` paired-session analysis |
-| Elevated vs non-elevated session comparison | Completed | Event ID `4624` analysis |
-| Evidence sanitization for GitHub | Completed | Sanitized screenshots and documentation |
-| Security severity assessment | Completed | Context, scope, impact, and evidence-based severity classification |
-| Incident disposition | Completed | Benign / Test Activity classification with confidence assessment |
-| Escalation and closure decision | Completed | Do Not Escalate and Close — Authorized Test Activity |
-| Git/GitHub portfolio workflow | Practicing | Repository initialization, staging, commits, remotes, push, and troubleshooting |
-
-Additional skills will be added as I actually begin working on them.
+- Skills are added only after meaningful learning or hands-on work begins.
+- Completed capabilities must be supported by work that was actually performed.
+- A complete lab does not automatically mean the broader skill is complete.
+- Evidence is reviewed before publication.
+- Sensitive or unnecessary identifying information is removed from public evidence.
+- Technical evidence required to support an investigation is preserved where practical.
+- Conflicting notes are resolved using primary evidence rather than assumptions.
+- Investigation limitations are documented rather than hidden.
+- Repository structure is expanded only when real work requires it.
 
 ---
 
-## Current Hands-On Labs
+## Portfolio Workflow
 
-### Security Incident Triage
+The repository itself is also being used to practice a repeatable technical-documentation workflow.
 
-#### Windows Authentication Failure Analysis
+Current portfolio workflow status:
 
-Practiced analysis of controlled Windows authentication failures using Windows Security Event ID `4625`.
+**Git/GitHub workflow: Practicing**
 
-Work performed includes:
+Work performed so far includes:
 
-- examining failed interactive authentication events
-- comparing password and Windows Hello PIN failures
-- interpreting relevant authentication fields
-- validating Event Viewer data using raw XML
-- preserving sanitized screenshots as evidence
-- distinguishing observed facts from assumptions
+- Git repository initialization
+- staging and reviewing changes
+- creating descriptive commits
+- configuring repository remotes
+- pushing work to GitHub
+- troubleshooting GitHub authentication
+- configuring repository-specific Git identity
+- verifying published commits
+- reviewing evidence before publication
+- maintaining sanitized screenshots and Markdown documentation
 
-[View the authentication failure analysis lab](skills/triaging-security-incident/labs/authentication-failure-analysis/README.md)
-
-#### Windows Authentication Timeline Correlation
-
-Correlated a controlled failed Windows password authentication with subsequent successful workstation-unlock activity.
-
-Work performed includes:
-
-- correlating Event ID `4625` with subsequent Event ID `4624` activity
-- building a failed-to-successful authentication timeline
-- analyzing Logon Type `7` workstation unlocks
-- examining supporting Logon Type `11` CachedInteractive events
-- analyzing Linked Logon IDs
-- comparing elevated and non-elevated authentication contexts
-- resolving conflicting manual notes using primary log evidence
-- preserving sanitized General and XML evidence
-
-[View the authentication timeline correlation lab](skills/triaging-security-incident/labs/authentication-timeline-correlation/README.md)
+Git and GitHub are treated as portfolio and version-control tools rather than as Security Incident Triage investigation tools.
 
 ---
 
-## Tools Used
+## Repository Organization
 
-Tools listed here are included only after they have been used during hands-on work.
-
-- Windows Event Viewer
-- Windows Security Event Log
-- Windows Settings
-- Command Prompt
-- Git
-
----
-
-## Current Focus
-
-Windows process triage, including process execution context, parent-child relationships, command-line analysis, and determining whether process activity is expected or suspicious.
-
----
-
-## Repository Structure
+The repository uses a layered structure so that the landing page remains manageable as additional cybersecurity skills are added.
 
 ```text
 cybersecurity-learning/
 │
 ├── README.md
+│   └── portfolio landing page
 │
-└── skills/
-    └── triaging-security-incident/
-        ├── README.md
-        └── labs/
-            └── authentication-failure-analysis/
-                ├── README.md
-                └── screenshots/
+├── skills/
+│   ├── README.md
+│   │   └── cybersecurity skills catalog
+│   │
+│   └── triaging-security-incident/
+│       ├── README.md
+│       │   └── detailed skill progress and capabilities
+│       │
+│       └── labs/
+│           └── individual evidence-driven labs
+│
+└── projects/
+    └── reserved for future multi-skill projects when required
+```
+
+Existing skill and lab paths are kept stable unless there is a strong reason to reorganize them.
+
+Additional discipline layers can be introduced later if the number of skills grows enough to require them.
+
+---
+
+## Architecture
+
+The portfolio currently follows:
+
+```text
+Root Portfolio
+    ↓
+Skills Catalog
+    ↓
+Individual Skill
+    ↓
+Hands-On Labs
+    ↓
+Evidence and Analysis
+```
+
+If the portfolio becomes substantially larger, the skills catalog can later introduce cybersecurity-discipline pages without requiring the root README to become a large index.
+
+---
+
+## Current Portfolio Scope
+
+Active skill area:
+
+```text
+SOC Operations
+└── Security Incident Triage
+```
+
+Detailed capability status and lab evidence are maintained in the relevant skill README and are intentionally not duplicated here.
+
+---
+
+This portfolio will grow as additional skills are actually practiced, verified, documented, and supported by hands-on evidence.
