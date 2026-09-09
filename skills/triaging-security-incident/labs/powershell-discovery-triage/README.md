@@ -2,11 +2,11 @@
 
 ## Lab Status
 
-**Documentation complete locally — QA and GitHub publication pending**
+**Published and verified on GitHub**
 
-The controlled investigation, evidence collection, analysis, screenshot sanitization, and local documentation are complete.
+The controlled investigation, evidence collection, analysis, screenshot sanitization, repository QA, commit/push, and remote GitHub verification are complete.
 
-Final repository QA, commit/push, and remote GitHub verification are still pending.
+This lab is published as portfolio evidence while the broader Windows process-triage capability remains in progress.
 
 ## Objective
 
