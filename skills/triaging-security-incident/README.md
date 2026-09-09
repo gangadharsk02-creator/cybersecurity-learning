@@ -83,6 +83,27 @@ The lab includes:
 
 [View the Windows Process Parent-Child Correlation](labs/process-parent-child-correlation/README.md)
 
+### 4. Windows PowerShell Discovery Triage
+
+I investigated a controlled PowerShell discovery sequence and determined how process evidence and authorization context change a SOC triage decision.
+
+The lab includes:
+
+- Windows Security Event ID `4688` process-creation analysis
+- reconstruction of `explorer.exe → cmd.exe → powershell.exe → whoami.exe`
+- parent-child correlation using process IDs
+- analysis of `powershell.exe -NoProfile -Command "whoami.exe /groups"`
+- supporting `conhost.exe` process analysis
+- executable-path, command-line, timestamp, and token-context review
+- surrounding 35-second process-creation analysis
+- evidence-only assessment before authorization was known
+- transition from `Needs More Investigation` to `Benign — Authorized Activity`
+- severity, confidence, escalation, and closure decisions
+- documented investigation limitations
+- sanitized General and XML evidence screenshots
+
+[View the Windows PowerShell Discovery Triage lab](labs/powershell-discovery-triage/README.md)
+
 ---
 
 ## Investigation Tools and Data Sources
@@ -126,6 +147,11 @@ Hands-on work completed so far has produced and validated several types of inves
 - reconstructed process trees
 - documented benign-versus-suspicious process assessments
 - investigation limitations and evidence-quality notes
+- dual-use PowerShell discovery-triage evidence
+- multi-process lineage reconstruction across `explorer.exe`, `cmd.exe`, `powershell.exe`, and `whoami.exe`
+- evidence-only versus authorization-informed disposition comparison
+- documented authorization-context verification before benign closure
+- surrounding Event ID `4688` process-window analysis with explicit telemetry limitations
 
 Public evidence is reviewed before publication so that investigation-relevant technical information is preserved while unnecessary identifying or sensitive information is removed.
 
@@ -183,6 +209,7 @@ The following capabilities are marked completed only where they have been practi
 | Process parent-child correlation | Completed | [Windows Process Parent-Child Correlation](labs/process-parent-child-correlation/README.md) |
 | Process command-line analysis | Completed | Enabled command-line auditing and interpreted controlled process arguments |
 | Basic dual-use process assessment | Completed | Evaluated `cmd.exe` and `ping.exe` using context rather than process name alone |
+| Contextual PowerShell discovery triage | Completed | [Windows PowerShell Discovery Triage](labs/powershell-discovery-triage/README.md) |
 
 Additional capabilities will be added only after they have been practiced and supported by evidence.
 
@@ -211,8 +238,14 @@ Additional capabilities will be added only after they have been practiced and su
 - Command-line arguments can provide more investigative value than the executable name alone.
 - Legitimate Windows utilities such as `cmd.exe` and `ping.exe` are dual-use and may appear in both normal administration and attacker activity.
 - Token elevation state is supporting context, not a standalone benign-or-malicious verdict.
+- Process telemetry can establish what executed and how processes are related, but it cannot independently prove user intent or authorization.
+- A process chain that appears benign should not be closed as authorized activity until the relevant authorization or user context is verified.
+- A limited Event ID `4688` time window supports conclusions about observed process creation only; it does not prove the absence of suspicious network, EDR, or other activity outside that telemetry.
+- PowerShell arguments such as `-NoProfile` are weak indicators by themselves and should be evaluated together with lineage, command-line content, paths, timing, and surrounding activity.
 - Evidence should be collected and validated before drawing conclusions.
 - Public investigation evidence should preserve technical value while removing unnecessary identifying or sensitive information.
+
+
 ---
 
 ## Skill Completion Criteria
@@ -239,6 +272,8 @@ Before I consider security incident triage completed, I should be able to indepe
 
 ## Next Focus
 
-Continue Windows process triage with activity that is less obviously benign.
+Continue Windows process triage with a controlled scenario containing stronger suspicious indicators.
 
-The next stage will focus on recognizing suspicious process relationships and command-line patterns, determining what additional evidence is required when process intent is uncertain, and avoiding conclusions based only on executable names.
+The next stage will focus on distinguishing dual-use activity from genuinely higher-risk process behavior by examining parent-child relationships, command-line patterns, execution context, and surrounding telemetry.
+
+The goal is to practice recognizing when available evidence justifies escalation rather than benign closure, while continuing to avoid conclusions based only on executable names.

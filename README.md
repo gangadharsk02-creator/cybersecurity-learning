@@ -63,6 +63,7 @@ Current hands-on work has included:
 - Windows process-creation analysis
 - parent-child process correlation
 - command-line analysis
+- contextual triage of dual-use PowerShell discovery activity
 
 The broader process-triage capability remains in progress and is not yet marked complete.
 
@@ -70,13 +71,14 @@ The broader process-triage capability remains in progress and is not yet marked 
 
 ## Current Focus
 
-Continue Windows process triage with less obviously benign activity.
+Continue Windows process triage with a controlled scenario containing stronger suspicious indicators.
 
 The next work will focus on:
 
-- suspicious or unusual parent-child process relationships
-- unusual command-line patterns
-- determining what additional evidence is required when process intent is uncertain
+- recognizing higher-risk parent-child process relationships
+- analyzing stronger suspicious command-line patterns
+- determining when available evidence justifies escalation
+- identifying what additional telemetry is required when process intent remains uncertain
 - avoiding conclusions based only on executable names
 
 ---

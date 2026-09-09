@@ -10,7 +10,7 @@ Detailed capabilities, progress, labs, evidence, and learning notes are maintain
 
 | Skill | Status | Hands-On Labs | Current Focus |
 |---|---|---:|---|
-| [Security Incident Triage](triaging-security-incident/README.md) | Learning | 3 | Windows process triage |
+| [Security Incident Triage](triaging-security-incident/README.md) | Learning | 4 | Windows process triage |
 
 ---
 
@@ -91,6 +91,7 @@ Current hands-on work includes:
 - Windows process-creation analysis
 - process parent-child correlation
 - process command-line analysis
+- dual-use PowerShell discovery triage
 
 Process triage remains in progress and has not been marked complete.
 
