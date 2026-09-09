@@ -45,8 +45,6 @@ The investigation therefore focuses on:
 
 ## Evidence Collection
 
-## Evidence Collection
-
 The investigation used Windows Security Event ID `4688` process-creation telemetry.
 
 All preserved screenshots were sanitized before inclusion in the public portfolio. Personal identifiers such as usernames, SIDs, hostnames, email addresses, and other identifying values were redacted while investigation-relevant fields were retained.
